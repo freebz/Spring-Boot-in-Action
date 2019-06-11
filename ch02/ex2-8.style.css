@@ -1,0 +1,19 @@
+/* 코드 2-8 독서 목록 애플리케이션 스타일시트(resources/static/css/style.css) */
+
+body {
+    background-color: #cccccc;
+    font-family: arial, helvetica, sans-serif;
+}
+
+.bookHeadline {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.bookDescription {
+    font-size: 10pt;
+}
+
+label {
+    font-weight: bold;
+}

@@ -1,0 +1,31 @@
+/* 코드 3-16 오류 템플릿 스타일추가(resources/static/css/style.css) */
+
+body {
+    background-color: #cccccc;
+    font-family: arial, helvetica, sans-serif;
+}
+
+.bookHeadline {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.bookDescription {
+    font-size: 10pt;
+}
+
+label {
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+}
+
+.errorPage {
+    text-align: center;
+}
+
+.oops {
+    font-size: 76pt;
+}

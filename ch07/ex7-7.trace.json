@@ -1,0 +1,37 @@
+// 코드 7-7 웹 요청의 세부 사항을 보고하는 /trace 엔드포인트
+
+[
+
+  ...
+
+  {
+    "timestamp": 1426378239775,
+    "info": {
+      "method": "GET",
+      "path": "/metrics",
+      "headers": {
+	"request": {
+	  "accept": "*/*",
+	  "host": "localhost:8080",
+	  "user-agent": "curl/7.37.1"
+	},
+	"response": {
+	  "X-Content-Type-Options": "nosniff",
+	  "X-XSS-Protection": "1; mode=block",
+	  "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+	  "Pragma": "no-cache",
+	  "Expires": "0",
+	  "X-Frame-Options": "DENY",
+	  "X-Application-Context": "application",
+	  "Content-Type": "application/json;charset=UTF-8",
+	  "Transfer-Encoding": "chunked",
+	  "Date": "Sun, 15 Mar 2015 00:10:39 GMT",
+	  "status": "200"
+	}
+      }
+    }
+  },
+
+  ...
+
+]

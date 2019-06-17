@@ -1,0 +1,33 @@
+// 코드 7-2 독서 목록 애플리케이션의 자동 구성 보고서
+
+{
+  "positiveMatches" {    // 성공한 조건
+
+    ...
+
+    "DataSourceAutoConfiguration.JdbcTemplateConfiguration#jdbcTemplate": [
+      {
+	"condition": "OnBeanCondition",
+	"message": "@ConditionalOnMissingBean (types:
+                    org.springframework.jdbc.core.JdbcOperations;
+                    SearchStrategy: all) found no beans"
+      }
+    ],
+
+    ...
+
+  },
+  "negativeMatches": {    // 실패한 조건
+  "ActiveMQAutoConfiguration": [
+      {
+	"condition": "OnClassCondition",
+	"message": "required @ConditionalOnClass classes not found:
+                    javax.jms.ConnectionFactory.org.apache.activemq
+                    .ActiveMQConnectionFactory"
+      }
+  ],
+
+      ...
+
+  },
+}

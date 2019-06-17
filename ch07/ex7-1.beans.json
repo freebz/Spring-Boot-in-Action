@@ -1,0 +1,69 @@
+// 코드 7-1 스프링 애플리케이션 컨텍스트에 있는 빈을 보여주는 /beans 엔드포인트
+
+[
+  {
+    "context": "application",
+    "parent": null,
+    "beans": [
+      {
+	"bean": "readingListApplication",    // 빈 ID
+	"scope": "singleton",
+	"type": "readinglist.ReadingListApplication$$EnhancerBySpringCGLIB$$f363c202",
+	"resource": "null",
+	"dependencies": []
+      },
+      {
+	"bean": "amazonProperties",
+	"scope": "singleton",
+	"type": "readinglist.AmazonProperties",
+	"resource": "URL [jar:file:/.../readinglist=0.0.1-SNAPSHOT.jar!/
+                          readinglist/AmazonProperties.class]",
+	"dependencies": []
+      },
+
+      ...
+
+      {
+	"bean": "readingListController",
+	"scope": "singleton",    // 빈 스코프
+	"type": "readinglist.ReadingListController",
+	"resource": "URL [jar:file:/.../readinglist-0.0.1-SNAPSHOT.jar!/
+                          readinglist/ReadingListController.class]",    // 리소스 파일
+	"dependencies": [    // 의존성
+	  "readingListRepository",
+	  "amazonProperties"
+	]
+      },
+
+      ...
+
+      {
+	"bean": "readingListRepository",
+	"scope": "singleton",
+	"type": "readinglist.ReadingListRepository",    // 자바 타입
+	"resource": "null",
+	"dependencies": [
+	  "(inner bean)#98ce66",
+	  "(inner bean)#1fd7add0",
+	  "(inner bean)#59faabb2",
+	  "jpaMappingContext"
+	]
+      },
+      {
+	"bean": "readerRepository",
+	"scope" :"singleton",
+	"type": "readinglist.REaderRepository",
+	"resource": "null",
+	"dependencies": [
+	  "(inner bean)#219df4f5",
+	  "(inner bean)#2c0e7419",
+	  "(inner bean)#7d86037b",
+	  "jpaMappingContext"
+	]
+      },
+
+      ...
+
+    ]
+  }
+]

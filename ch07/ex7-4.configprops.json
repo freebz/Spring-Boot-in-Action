@@ -1,0 +1,52 @@
+// 코드 7-4 구성 프로퍼티 보고서
+
+{
+  "amazonProperties": {    // 아마존 구성
+    "prefix": "amazon",
+    "properties": {
+      "associateId": "habuma-20"
+    }
+  },
+  ...
+  "serverProperties": {    // 서버 구성
+    "prefix": "server",
+    "properties": {
+      "address": null,
+
+      ...
+
+      "tomcat": {
+	"accessLogEnabled": false,
+	"accessLogPattern": null,
+	"backgroundProcessorDelay": 30,
+	"basedir": null,
+	"compressableMimeTypes": "text/html,text.xml,text/plain",
+	"compression": "off",
+	"maxHttpHeaderSize": 0,
+	"maxThreads": 0,
+	"portHeader": null,
+	"protocolHeader": null,
+	"remoteIpHeader": null,
+	"uriEncoding": null
+      },
+
+      ...
+
+      "contextPath": null,
+      error: {
+	path: "/error",
+	includeStacktrace: "NEVER"
+      },
+      "ssl": null,
+      "port": null,
+      "servletPath": "/",
+      "sessionTimeout": null,
+
+      ...
+
+    }
+  },
+
+  ...
+
+}

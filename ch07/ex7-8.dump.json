@@ -1,0 +1,44 @@
+// 코드 7-8 애플리케이션의 스레드 스냅샷을 제공하는 /dump 엔드포인트
+
+[
+  {
+    "threadName": "container-0",
+    "threadId": 19,
+    "blockedTime": -1,
+    "blockedCount": 0,
+    "waitedTime": -1,
+    "waitedCount": 64,
+    "lockName": null,
+    "lockOwnerId": -1,
+    "lockOwnerName": null,
+    "inNative": false,
+    "suspended": false,
+    "threadState": "TIMED_WAITING",
+    "stackTrace": [
+      {
+	"className": "java.lang.Thread",
+	"fileName": "Thread.java",
+	"lineNumber": -2,
+	"methodName": "sleep",
+	"nativeMethod": true
+      },
+      {
+	"nativeMethod": false
+      },
+      {
+	"className": "org.springframework.boot.context.embedded.tomcat.
+                      TomcatEmbeddedServletContainer$1",
+	"fileName": "TomcatEmbeddedServletContainer.java",
+	"lineNumber": 139,
+	"methodName": "run",
+	"nativeMethod": false
+      }
+    ],
+    "lockedMonitors": [],
+    "lockedSynchronizers": [],
+    "lockInfo": null
+  },
+
+  ...
+
+]

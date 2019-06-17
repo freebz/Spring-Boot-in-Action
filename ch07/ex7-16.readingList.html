@@ -1,0 +1,13 @@
+<!-- 코드 7-16 readingList.html -->
+
+<!DOCTYPE html>
+<html>
+...
+<body>
+...
+  <h2><span th:text="${reader != null} ? ${reader.fullname} : 'Admin'">Name</span>'s
+                     Reading List</h2>
+  <div th:unless="${#lists.isEmpty(books)}">
+...
+</body>
+</html>

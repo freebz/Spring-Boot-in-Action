@@ -1,0 +1,26 @@
+// 코드 7-5 독서 목록 애플리케이션에 매핑된 컨트롤러 엔드포인트
+
+{
+
+  ...
+
+  // ReadingListController 매핑
+  "{[/],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}": {
+  "bean": "requestMappingHandlerMapping",
+  "method": "public java.lang.String readinglist.ReadingListController
+             readersBooks(readinglist.REader,org.springframework.ui.Model)"
+  },
+  "{[/],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}": {
+  "bean": "requestMappingHandlerMapping",
+  "method": "public java.lang.String readinglist.REadingListController
+             .addToReadingList(readinglist.Reader,readinglist.Book)" },
+  // 자동 구성 보고서 매핑
+  "{[/autoconfig],methods=[GET],params=[],headers=[],consumes=[],produces=[],
+                                custom=[]}": {
+  "bean": "endpointHandlerMapping",
+  "method": "public java.lang.Object org.springframework.boot
+  },
+
+  ...
+
+}

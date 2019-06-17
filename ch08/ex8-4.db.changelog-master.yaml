@@ -1,0 +1,77 @@
+# 코드 8-4 독서 목록 데이터베이스 초기화용 Liquibase 스크립트(resources/db/changelog/db.changelog-master.yaml)
+
+databaseChangeLog:
+  - changeSet:
+      id: 1    # 변경 집합 ID
+      author: habuma
+      changes:
+        - createTable:
+            tableName: reader    # reader 테이블 생성
+            columns:
+              - column:
+                  name: username
+                  type: varchar(25)
+                  constraints:
+                    unique: true
+                    nullable: false
+              - column:
+                  name: password
+                  type: varchar(25)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: fullname
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+        - createTable:
+            tableName: book    # book 테이블 생성
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: author
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: description
+                  type: varchar(1000)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: isbn
+                  type: varchar(10)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(250)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: reader_username
+                  type: varchar(25)
+                  constraints:
+                    nullable: false
+                    references: reader(username)
+                    foreignKeyName: fk_reader_username
+        - createSequence:    # 시퀀스 정의
+          sequenceName: hibernate_sequence
+        - insert:
+            tableName: reader    # reader 초기값 입력
+            columns:
+              - column:
+                  name: username
+                  value: craig
+              - column:
+                  name: password
+                  value: password
+              - column:
+                  name: fullname
+                  value: Craig Walls
